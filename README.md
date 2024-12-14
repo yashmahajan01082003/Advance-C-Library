@@ -47,4 +47,5 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 
 ## Contact
 
-For any questions or inquiries, please contact me at amrutkar.ruturaj20@gmail.com.
+For any questions or inquiries, please contact me at yashmahajan01082003@gmail.com
+
