@@ -1,0 +1,127 @@
+Name: 
+Yash Sandip Mahajan
+Bio:
+Hi, I'm Yash Sandip Mahajan, hailing from Pune, Maharashtra, India. I'm currently pursuing my Bachelor of Technology in Computer Engineering at Vishwakarma Institute Of Technology, where I've been privileged to secure the top rank with a stellar CGPA of 9.57. Before this, I completed my Diploma in Computer Engineering from Government Polytechnic Pune, where I ranked fifth with an impressive score of 94.13 percent.
+My journey in software development has been quite exhilarating. As a freelance software developer, I've had the opportunity to work on over 20 projects, ranging from Android and Django to AI/ML and web development. It's been a fulfilling experience to craft tailored solutions that not only meet but exceed client expectations through innovative problem-solving and exceptional quality.
+During my internship at Dhrumi Technologies, I dabbled as a full-stack developer, contributing to the development of an application using NodeJS, MongoDB, and Express. It was a fantastic learning curve that further honed my skills.
+I take immense pride in the projects I've undertaken, such as the Operating System Simulation application, which mimics the features of macOS with advanced functionalities like gesture-based tab control and retina-based mouse control. Another notable project is the Secured Exam App, designed to provide enhanced security for online examinations by combining screen sharing and camera image capture.
+Beyond my professional endeavours, I've had the privilege of clinching various accolades, including winning competitions like the National Level Research Paper Presentation Competition (Techolympics) and the National Level Hackathon at IIT BHU (Planet Hunt).
+With a strong foundation in languages like Java, C, C++, Python, and proficiency in frameworks/libraries such as Django, I'm constantly driven to explore new horizons in the vast realm of software engineering.
+Contact Details: 
+Mobile Number : +919730889531
+Email : yashmahajan01082003@gmail.com
+
+
+
+
+Plan of Action:
+The plan of action involves the set of steps along with the tech stack to be used in each step, it is as follows:
+1.	Face Detection:
+The most important factors to be considered for face detection here are:
+a.	Accuracy
+b.	Scalability 
+c.	Speed
+d.	Ease of Integration
+e.	Resource efficiency
+So just rather than choosing any model , lets have a comparative analysis over all the techniques, as in Table 1.: 
+Factors	Recommended Models
+Accuracy	MTCNN, Dlib
+Speed	MTCNN, OpenCV (with optimized models)
+Scalability	MTCNN, OpenCV
+Ease of Integration	OpenCV, MTCNN, Dlib
+Resource Efficiency	OpenCV (optimized models), deep learning models
+Table 1. Comparative Analysis with respect to Features of The Model
+
+So if seen, OpenCV and MTCNN that is Multi-task Cascade Convolutional Neural Network, has the highest probability to be chosen as they are recommended in most of the factors but, the most important factor is accuracy. Accuracy is the most important factor as it can change one person’s attendance with someone else.
+It was introduced by Kaipeng Zhang, et al. in 2016 in their paper, “Joint Face Detection and Alignment Using Multi-task Cascaded Convolutional Networks.” It not only detects the face but also detects five key points as well. It uses a cascade structure with three stages of CNN. First, they use a fully convolutional network to obtain candidate windows and their bounding box regression vectors, and the highly overlapped candidates are overlapped using on-maximum suppression (NMS). Next, these candidates are passed to another CNN which rejects a large number of false positives and performs calibration of bounding boxes. In the final stage, the facial landmark detection is performed.
+So, MTCNN is the best model to be chosen for face detection as:
+a.	Accuracy: MTCNN has consistently demonstrated high accuracy in various benchmark tests and real-world applications. For example:
+	In the WIDER Face dataset, MTCNN achieved a mean average precision 	(mAP) of over 90%.
+	In the FDDB dataset, MTCNN achieved a detection rate of over 94% with 	a false positive rate of less than 0.0001 per image.
+b.	Speed: While MTCNN may not be the fastest face detection model, it still offers reasonable speed for real-time applications. For instance:
+	On standard hardware configurations, MTCNN can process images at a 	rate of several frames per second (FPS).
+	With optimizations such as model pruning and quantization, MTCNN's 	inference speed can be further improved.
+c.	Scalability: MTCNN can be effectively scaled to handle large user bases and multiple concurrent face detection requests. For example:
+	By deploying MTCNN on cloud platforms with scalable computing 	resources, it's possible to achieve high throughput and scalability.
+	MTCNN's multi-task cascaded architecture allows for parallel 	processing, enabling efficient scaling on multi-core CPUs and GPUs.
+d.	Ease of Integration: MTCNN provides well-documented APIs and libraries for seamless integration into various programming languages and platforms. For instance:
+	MTCNN is available as pre-trained models in popular deep learning 	frameworks like TensorFlow and PyTorch, simplifying integration into 	existing projects.
+	There are numerous tutorials, code examples, and community support 	resources available for developers working with MTCNN.
+e.	Resource Efficiency: While MTCNN may require more computational resources compared to lightweight face detection models, it still offers a good balance between accuracy and resource efficiency. For example:
+	MTCNN's resource usage can be optimized through techniques such as 	model compression, quantization, and hardware acceleration.
+	By leveraging optimized implementations and hardware accelerators 	(e.g., GPUs, TPUs), the resource efficiency of MTCNN can be further 	improved.
+ 
+Fig 1. Multi-task Cascaded Convolutional Networks (MTCNN) for Face Detection and Facial Landmark Alignment
+ 
+Fig 2. Phases in the MTCNN
+
+2.	Face Recognition:
+The most important factors to be considered for face detection here are:
+f.	Accuracy
+g.	Scalability 
+h.	Speed
+i.	Ease of Integration
+j.	Resource efficiency
+
+Factors	Most Recommended Model
+Accuracy	FaceNet
+Model Complexity	ArcFace
+Resource Efficiency	ArcFace
+Ease of Use/Integration	FaceNet
+Scalability	FaceNet
+Table 2. Comparative Analysis with respect to Features of The Model
+
+Since face recommendation models to be chosen involves a choice between FaceNet and ArcFace because they dominate the various considerable factors, but again accuracy is most important. So, face recognition model to be chosen here is FaceNet. 
+Now, choice of FaceNet is justified as follows:
+1.	Accuracy:
+	On the Labeled Faces in the Wild (LFW) dataset, FaceNet achieved an accuracy of over 99.6% in face verification tasks, surpassing previous state-of-the-art methods. This high accuracy demonstrates the effectiveness of FaceNet in recognizing faces accurately across different poses, lighting conditions, and identities.
+	FaceNet embeddings have also been evaluated on the YouTube Faces (YTF) dataset, achieving high verification rates and demonstrating robust performance across diverse datasets and evaluation protocols.
+2.	Model Complexity:
+	FaceNet typically employs deep neural network architectures such as inception-based or ResNet-based models. These architectures consist of multiple layers of convolutional and pooling operations, allowing the model to learn complex features from face images.
+	While the exact architecture may vary, FaceNet aims to learn a high-dimensional embedding space where distances between embeddings correspond to face similarity. This objective requires a moderately complex model architecture capable of capturing subtle variations in facial features.
+3.	Resource Efficiency:
+	FaceNet embeddings are compact vectors of fixed size, typically ranging from 128 to 512 dimensions. These embeddings are efficient to store and compare, requiring minimal memory compared to storing entire face images.
+	During inference, FaceNet embeddings can be computed efficiently for individual faces, allowing for real-time or near-real-time performance in face recognition applications.
+4.	Ease of Use/Integration:
+	FaceNet provides pre-trained models and libraries in popular deep learning frameworks such as TensorFlow and PyTorch, simplifying integration into existing projects. These pre-trained models allow developers to leverage the power of FaceNet without the need for extensive training on large datasets.
+	Additionally, FaceNet's availability of documentation, tutorials, and community support resources makes it relatively straightforward for developers to get started with and integrate into their applications.
+5.	Scalability:
+	FaceNet is scalable both during training and inference, depending on factors such as hardware resources, dataset size, and parallel processing capabilities.
+	While training FaceNet on large-scale datasets can require significant computational resources, the trained models can be deployed and scaled to handle large volumes of face recognition tasks efficiently, making it suitable for applications with varying levels of demand.
+
+ 
+Fig 3. FaceNet Working Mechanism
+ 
+Fig 4. The combined approach having MTCNN and FaceNet
+
+3.	Background Detection: 
+Background detection is one of the most important phases of this project because a bogus attendance attempt is very common to try getting attendance, so rather than single technique, the multiple techniques are combined for the best possible result as follows:
+
+a. Preprocessing:
+	Apply image preprocessing techniques such as Gaussian blur or morphological operations to smooth out noise and enhance the quality of input frames.
+b. Background Subtraction:
+	Use background subtraction algorithms like BackgroundSubtractorMOG2 or BackgroundSubtractorKNN from OpenCV to detect moving objects based on pixel intensity differences between the current frame and the background model.
+c. Image Segmentation:
+	Apply image segmentation techniques such as contour detection or watershed segmentation to further refine the foreground masks obtained from background subtraction.
+	Segment the foreground regions into distinct objects or blobs, removing small noise or artifacts.
+d. Deep Learning-based Fusion:
+	Train a deep learning model (e.g., convolutional neural network) on a labelled dataset to perform background detection.
+	Use the output of the deep learning model in conjunction with the results of background subtraction and image segmentation.
+	Combine the predictions from the deep learning model with the results of traditional techniques, applying voting schemes or confidence thresholds to make final decisions.
+e. Adaptive Thresholding and Custom Approaches:
+	Implement adaptive thresholding techniques to dynamically adjust parameters such as background model learning rate or segmentation thresholds based on the scene's characteristics.
+	Develop custom algorithms or heuristics based on domain-specific knowledge to refine background detection results, incorporating rules to handle specific scenarios more effectively.
+f.	Ensemble Methods:
+	Create an ensemble of background detection models, each based on different techniques or variations of the same technique.
+	Combine the outputs of individual models using techniques such as averaging, weighted averaging, or stacking.
+	Ensemble methods help mitigate the weaknesses of individual models and improve overall accuracy by leveraging the collective intelligence of multiple models.
+g.	Post-processing:
+	Apply post-processing techniques such as morphological operations or connected component analysis to further refine and clean up the detected foreground masks.
+	Smooth out the boundaries of detected objects and remove any remaining noise or artifacts.
+ 
+Fig 5. Flowchart For Background Detection
+
+4.	Integration:
+ 
+  
+
